@@ -1,7 +1,16 @@
+import logo from '../../assets/images/logo1.png';
+import { SocialIcon } from 'react-social-icons'
+
+
 const Footer = () => {
     return (
-        <div className=" p-10 bg-base-200 text-base-content">
-            <footer className="footer container mx-auto px-5">
+        <footer className="py-10 bg-base-200 text-base-content pb-20">
+            <div className="footer py-10 container mx-auto px-5">
+                <aside>
+                    <img className='w-20' src={logo} alt="" />
+                    <p className="text-sm md:text-2xl font-extrabold">Food <span className="text-[#23ad0e]">Sharing</span></p>
+                    <p>Providing reliable tech since 2000</p>
+                </aside>
                 <nav>
                     <header className="footer-title">Services</header>
                     <a className="link link-hover">Branding</a>
@@ -13,8 +22,8 @@ const Footer = () => {
                     <header className="footer-title">Company</header>
                     <a className="link link-hover">About us</a>
                     <a className="link link-hover">Contact</a>
-                    <a className="link link-hover">Products</a>
-                    <a className="link link-hover">My Cart</a>
+                    <a className="link link-hover">Available Food</a>
+                    <a className="link link-hover">Press kit</a>
                 </nav>
                 <nav>
                     <header className="footer-title">Legal</header>
@@ -23,19 +32,21 @@ const Footer = () => {
                     <a className="link link-hover">Cookie policy</a>
                 </nav>
                 <form>
-                    <header className="footer-title">Newsletter</header>
-                    <fieldset className="form-control">
-                        <label className="label">
-                            <span className="label-text">Enter your email address</span>
-                        </label>
-                        <div className="relative">
-                            <input type="text" placeholder="username@site.com" className="input input-bordered w-32 lg:w-full rounded-r-none" />
-                            <button className="btn bg-[#23ad0e] border-[#23ad0e] hover:bg-white hover:text-[#23ad0e] text-white absolute rounded-l-none">Subscribe</button>
+                    <header className="footer-title">Social Links</header>
+                    <nav>
+                        <div className="flex flex-wrap justify-center gap-4">
+                            <SocialIcon url="https://twitter.com"></SocialIcon>
+                            <SocialIcon url="https://www.facebook.com/"></SocialIcon>
+                            <SocialIcon url="https://instagram.com"></SocialIcon>
+                            <SocialIcon url="https://www.linkedin.com/"></SocialIcon>
                         </div>
-                    </fieldset>
+                    </nav>
                 </form>
-            </footer>
-        </div>
+            </div>
+            <aside>
+                <p className='text-center px-5 text-sm'>Copyright © 2023 - All right reserved by Ismat Jerin</p>
+            </aside>
+        </footer>
     );
 };
 
