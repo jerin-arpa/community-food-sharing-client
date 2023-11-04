@@ -30,7 +30,7 @@ const Banner = () => {
                                         </div>
                                         <h1 className="mb-5 text-3xl lg:text-6xl font-bold">Share a Meal, <br /> Share a <span className='text-[#23ad0e]'>Smile with</span> everyone</h1>
                                         <p className="mb-5">Join our community of food enthusiasts to share delicious meals, build connections, and spread happiness one plate at a time.</p>
-                                        <button className="btn bg-[#23ad0e] border-0 text-white hover:bg-white hover:text-[#23ad0e] px-14">Get Started</button>
+                                        <button className="btn bg-[#23ad0e] border-[#23ad0e] text-white hover:bg-white hover:text-[#23ad0e] hover:border-[#23ad0e] px-14">Get Started</button>
                                     </div>
                                 </div>
 
@@ -55,7 +55,7 @@ const Banner = () => {
                                         </div>
                                         <h1 className="mb-5 text-3xl lg:text-6xl font-bold">Savor the Flavors of <span className='text-[#23ad0e]'>Togetherness</span></h1>
                                         <p className="mb-5">Discover the magic of shared meals – a place where diverse flavors, cultures, and stories unite in the spirit of togetherness.</p>
-                                        <button className="btn bg-[#23ad0e] border-0 text-white hover:bg-white hover:text-[#23ad0e] px-14">Get Started</button>
+                                        <button className="btn bg-[#23ad0e] border-[#23ad0e] text-white hover:bg-white hover:text-[#23ad0e] hover:border-[#23ad0e] px-14">Get Started</button>
                                     </div>
                                 </div>
 
@@ -80,7 +80,7 @@ const Banner = () => {
                                         </div>
                                         <h1 className="mb-5 text-3xl lg:text-6xl font-bold">From<span className='text-[#23ad0e]'> Our Table</span> to Yours</h1>
                                         <p className="mb-5">Connect with fellow food lovers in your community and share the warmth of homemade meals. Embrace the joy of giving and receiving delicious food.</p>
-                                        <button className="btn bg-[#23ad0e] border-0 text-white hover:bg-white hover:text-[#23ad0e] px-14">Get Started</button>
+                                        <button className="btn bg-[#23ad0e] border-[#23ad0e] text-white hover:bg-white hover:text-[#23ad0e] hover:border-[#23ad0e] px-14">Get Started</button>
                                     </div>
                                 </div>
 
@@ -105,7 +105,7 @@ const Banner = () => {
                                         </div>
                                         <h1 className="mb-5 text-3xl lg:text-6xl font-bold">Neighbors Feeding <span className='text-[#23ad0e]'>Neighbors</span></h1>
                                         <p className="mb-5">Experience the joy of community food sharing as neighbors come together to share homemade dishes, foster friendships, and support one another.</p>
-                                        <button className="btn bg-[#23ad0e] border-0 text-white hover:bg-white hover:text-[#23ad0e] px-14">Get Started</button>
+                                        <button className="btn bg-[#23ad0e] border-[#23ad0e] text-white hover:bg-white hover:text-[#23ad0e] hover:border-[#23ad0e] px-14">Get Started</button>
                                     </div>
                                 </div>
 

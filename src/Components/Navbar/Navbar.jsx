@@ -40,14 +40,14 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                     }>Add Food</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/manageMyFoods' className={({ isActive, isPending }) =>
+                    <NavLink to='/manageFoods' className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "font-bold text-[#23ad0e] underline" : ""
-                    }>Manage My Foods</NavLink>
+                    }>Manage Foods</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/myFoodRequest' className={({ isActive, isPending }) =>
+                    <NavLink to='/foodRequest' className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "font-bold text-[#23ad0e] underline" : ""
-                    }> My Food Request</NavLink>
+                    }> Food Request</NavLink>
                 </li>
                 <li>
                     <NavLink to='/contact' className={({ isActive, isPending }) =>

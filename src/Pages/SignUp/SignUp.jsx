@@ -20,8 +20,9 @@ const SignUp = () => {
         const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
+        const photo = e.target.photo.value;
         const accepted = e.target.terms.checked;
-        console.log(name, email, password, accepted);
+        console.log(name, email, password, photo, accepted);
 
 
         setSignUpError('');
@@ -130,6 +131,13 @@ const SignUp = () => {
                                     signUpError && <p className="text-red-400 text-sm mt-2">{signUpError}</p>
                                 }
                             </div>
+                        </div>
+
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Photo URL</span>
+                            </label>
+                            <input type="text" name="photo" placeholder="Enter your photo url" className="input input-bordered" required />
                         </div>
 
                         <div className="flex gap-3 mt-5">
