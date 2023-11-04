@@ -1,81 +1,121 @@
 import { FaGripfire } from 'react-icons/fa6';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import banner1 from '../../../assets/images/banner1.png';
+import banner2 from '../../../assets/images/banner2.png';
+import banner3 from '../../../assets/images/banner3.png';
+import banner4 from '../../../assets/images/banner4.png';
 
 const Banner = () => {
     return (
         <div>
             <div>
-                <div className="carousel w-full">
-                    <div id="slide1" className="carousel-item relative w-full">
-                        <div className="hero " style={{ backgroundImage: 'url(https://i.ibb.co/3B8jHQ5/IMG-20231021-WA0000.jpg)', placeItems: 'normal' }}>
-                            <div className="hero-overlay bg-opacity-50"></div>
-                            <div className="container mx-auto px-5 py-28 md:py-44">
-                                <div className="max-w-md lg:max-w-2xl">
-                                    <div className="flex gap-3">
-                                        <div className="flex">
-                                            <FaGripfire className="text-2xl text-[#23ad0e]"></FaGripfire>
+                <Swiper
+                    spaceBetween={10}
+                    slidesPerView={1}
+                    onSlideChange={() => console.log('slide change')}
+                    onSwiper={(swiper) => console.log(swiper)}
+                >
+                    <SwiperSlide>
+                        <div className="hero">
+                            <div className="hero-overlay bg-opacity-0"></div>
+                            <div className='container mx-auto px-5 py-28 md:py-44 flex flex-col lg:flex-row gap-10'>
+                                <div className='flex-1'>
+                                    <div>
+                                        <div className="flex gap-3">
+                                            <div className="flex">
+                                                <FaGripfire className="text-2xl text-[#23ad0e]"></FaGripfire>
+                                            </div>
+                                            <p className="mb-4 text-xl">Community Food Sharing</p>
                                         </div>
-                                        <p className="mb-4 text-xl text-white">Community Food Sharing</p>
+                                        <h1 className="mb-5 text-3xl lg:text-6xl font-bold">Share a Meal, <br /> Share a <span className='text-[#23ad0e]'>Smile with</span> everyone</h1>
+                                        <p className="mb-5">Join our community of food enthusiasts to share delicious meals, build connections, and spread happiness one plate at a time.</p>
+                                        <button className="btn bg-[#23ad0e] border-0 text-white hover:bg-white hover:text-[#23ad0e] px-14">Get Started</button>
                                     </div>
-                                    <h1 className="mb-5 text-3xl lg:text-5xl font-bold text-white">Iconic Threads Unveiled</h1>
-                                    <p className="mb-5 text-white">Explore the pinnacle of style as we unveil the latest from Nike, Adidas, Gucci, Zara, H&M, and Levis. Discover iconic threads that define the fashion zeitgeist.</p>
-                                    <button className="btn bg-[#23ad0e] border-0 text-white hover:bg-white hover:text-[#23ad0e] px-14">Get Started</button>
+                                </div>
+
+                                <div className='flex-1'>
+                                    <img className='w-full' src={banner1} alt="" />
                                 </div>
                             </div>
                         </div>
-                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                            <a href="#slide3" className="btn btn-circle">❮</a>
-                            <a href="#slide2" className="btn btn-circle">❯</a>
-                        </div>
-                    </div>
+                    </SwiperSlide>
 
-
-                    <div id="slide2" className="carousel-item relative w-full">
-                        <div className="hero " style={{ backgroundImage: 'url(https://i.ibb.co/brWMxBW/IMG-20231021-WA0005.jpg)', placeItems: 'normal' }}>
-                            <div className="hero-overlay bg-opacity-50"></div>
-                            <div className="container mx-auto px-5 py-28 md:py-44">
-                                <div className="max-w-md lg:max-w-2xl">
-                                    <div className="flex gap-3">
-                                        <div className="flex">
-                                            <FaGripfire className="text-2xl text-[#23ad0e]"></FaGripfire>
+                    <SwiperSlide>
+                        <div className="hero">
+                            <div className="hero-overlay bg-opacity-0"></div>
+                            <div className='container mx-auto px-5 py-28 md:py-44 flex flex-col lg:flex-row gap-10'>
+                                <div className='flex-1'>
+                                    <div>
+                                        <div className="flex gap-3">
+                                            <div className="flex">
+                                                <FaGripfire className="text-2xl text-[#23ad0e]"></FaGripfire>
+                                            </div>
+                                            <p className="mb-4 text-xl">Community Food Sharing</p>
                                         </div>
-                                        <p className="mb-4 text-xl text-white">Community Food Sharing</p>
+                                        <h1 className="mb-5 text-3xl lg:text-6xl font-bold">Savor the Flavors of <span className='text-[#23ad0e]'>Togetherness</span></h1>
+                                        <p className="mb-5">Discover the magic of shared meals – a place where diverse flavors, cultures, and stories unite in the spirit of togetherness.</p>
+                                        <button className="btn bg-[#23ad0e] border-0 text-white hover:bg-white hover:text-[#23ad0e] px-14">Get Started</button>
                                     </div>
-                                    <h1 className="mb-5 text-3xl lg:text-5xl font-bold text-white">Trendsetters Junction</h1>
-                                    <p className="mb-5 text-white">Dive into the world of fashion trendsetters - Nike, Adidas, Gucci, Zara, H&M, and Levis. Experience a fusion of innovation and design, shaping the fashion landscape.</p>
-                                    <button className="btn bg-[#23ad0e] border-0 text-white hover:bg-white hover:text-[#23ad0e] px-14">Get Started</button>
+                                </div>
+
+                                <div className='flex-1'>
+                                    <img className='w-full' src={banner2} alt="" />
                                 </div>
                             </div>
                         </div>
-                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                            <a href="#slide1" className="btn btn-circle">❮</a>
-                            <a href="#slide3" className="btn btn-circle">❯</a>
-                        </div>
-                    </div>
+                    </SwiperSlide>
 
-
-                    <div id="slide3" className="carousel-item relative w-full">
-                        <div className="hero" style={{ backgroundImage: 'url(https://i.ibb.co/yVDkMZ6/IMG-20231018-WA0012.jpg)', placeItems: 'normal' }}>
-                            <div className="hero-overlay bg-opacity-50"></div>
-                            <div className="container mx-auto px-5 py-28 md:py-44">
-                                <div className="max-w-md lg:max-w-2xl">
-                                    <div className="flex gap-3">
-                                        <div className="flex">
-                                            <FaGripfire className="text-2xl text-[#23ad0e]"></FaGripfire>
+                    <SwiperSlide>
+                        <div className="hero">
+                            <div className="hero-overlay bg-opacity-0"></div>
+                            <div className='container mx-auto px-5 py-28 md:py-44 flex flex-col lg:flex-row gap-10'>
+                                <div className='flex-1'>
+                                    <div>
+                                        <div className="flex gap-3">
+                                            <div className="flex">
+                                                <FaGripfire className="text-2xl text-[#23ad0e]"></FaGripfire>
+                                            </div>
+                                            <p className="mb-4 text-xl">Community Food Sharing</p>
                                         </div>
-                                        <p className="mb-4 text-xl text-white">Community Food Sharing</p>
+                                        <h1 className="mb-5 text-3xl lg:text-6xl font-bold">From<span className='text-[#23ad0e]'> Our Table</span> to Yours</h1>
+                                        <p className="mb-5">Connect with fellow food lovers in your community and share the warmth of homemade meals. Embrace the joy of giving and receiving delicious food.</p>
+                                        <button className="btn bg-[#23ad0e] border-0 text-white hover:bg-white hover:text-[#23ad0e] px-14">Get Started</button>
                                     </div>
-                                    <h1 className="mb-5 text-3xl lg:text-5xl font-bold text-white"> Express Your Style</h1>
-                                    <p className="mb-5 text-white">Discover brand harmony at Community Food Sharing with Nike, Adidas, Gucci, Zara, H&M, and Levis. Express your unique style through a symphony of fashion influences.</p>
-                                    <button className="btn bg-[#23ad0e] border-0 text-white hover:bg-white hover:text-[#23ad0e] px-14">Get Started</button>
+                                </div>
+
+                                <div className='flex-1'>
+                                    <img className='w-full' src={banner3} alt="" />
                                 </div>
                             </div>
                         </div>
-                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                            <a href="#slide2" className="btn btn-circle">❮</a>
-                            <a href="#slide1" className="btn btn-circle">❯</a>
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                        <div className="hero">
+                            <div className="hero-overlay bg-opacity-0"></div>
+                            <div className='container mx-auto px-5 py-28 md:py-44 flex flex-col lg:flex-row gap-10'>
+                                <div className='flex-1'>
+                                    <div>
+                                        <div className="flex gap-3">
+                                            <div className="flex">
+                                                <FaGripfire className="text-2xl text-[#23ad0e]"></FaGripfire>
+                                            </div>
+                                            <p className="mb-4 text-xl">Community Food Sharing</p>
+                                        </div>
+                                        <h1 className="mb-5 text-3xl lg:text-6xl font-bold">Neighbors Feeding <span className='text-[#23ad0e]'>Neighbors</span></h1>
+                                        <p className="mb-5">Experience the joy of community food sharing as neighbors come together to share homemade dishes, foster friendships, and support one another.</p>
+                                        <button className="btn bg-[#23ad0e] border-0 text-white hover:bg-white hover:text-[#23ad0e] px-14">Get Started</button>
+                                    </div>
+                                </div>
+
+                                <div className='flex-1'>
+                                    <img className='w-full' src={banner4} alt="" />
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </SwiperSlide>
+                </Swiper>
             </div>
         </div>
     );
