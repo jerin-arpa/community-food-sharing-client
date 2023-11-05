@@ -1,7 +1,17 @@
 import { FaGripfire } from "react-icons/fa";
-import image from '../../../../assets/images/about3.png';
+import image from '../../../assets/images/about3.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+
 
 const Subscribe = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, []);
+
+
     return (
         <div>
             <div className="hero py-32" style={{ backgroundImage: `url(${image})` }}>
@@ -9,13 +19,15 @@ const Subscribe = () => {
                 <div className='container mx-auto px-5 py-16'>
                     <div className='mb-10'>
                         <div>
-                            <div className="flex justify-center gap-3">
+                            <div data-aos="zoom-in"
+                                data-aos-duration="2000" className="flex justify-center gap-3">
                                 <div>
-                                    <FaGripfire className="text-2xl text-[#23ad0e]"></FaGripfire>
+                                    <FaGripfire className="text-2xl text-white"></FaGripfire>
                                 </div>
                                 <p className="mb-6 text-xl text-white">Food Sharing</p>
                             </div>
-                            <div>
+                            <div data-aos="zoom-in"
+                                data-aos-duration="2000">
                                 <h1 className="mb-5 text-3xl lg:text-6xl font-bold text-black text-center">Don’t miss out on the Latest News</h1>
 
                                 <p className="text-white font-bold text-3xl text-center">We won’t spam you and we respect your privacy.</p>
