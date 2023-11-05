@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 
+
 const AvailableFood = () => {
     return (
         <div className="container mx-auto px-5">
@@ -7,7 +8,10 @@ const AvailableFood = () => {
                 <meta charSet="utf-8" />
                 <title>Food Sharing | Available Food</title>
             </Helmet>
-            <h2>Available Food</h2>
+
+            <div>
+
+            </div>
         </div>
     );
 };

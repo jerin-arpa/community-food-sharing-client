@@ -5,6 +5,8 @@ import Support from "../Support/Support";
 import Team from "../Team/Team";
 import LatestNews from "../LatestNews/LatestNews";
 import Subscribe from "./Subscribe/Subscribe";
+import FeaturedFood from "./FeaturedFood/FeaturedFood";
+import Review from "../Review/Review";
 
 const Home = () => {
     return (
@@ -14,12 +16,13 @@ const Home = () => {
                 <title>Food Sharing | Home</title>
             </Helmet>
             <Banner></Banner>
-
+            <FeaturedFood></FeaturedFood>
             <Team></Team>
             <Support></Support>
             <OurMission></OurMission>
             <LatestNews></LatestNews>
             <Subscribe></Subscribe>
+            <Review></Review>
         </div>
     );
 };
