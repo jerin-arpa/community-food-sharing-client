@@ -6,11 +6,17 @@ import about1 from '../../assets/images/about1.png';
 import about2 from '../../assets/images/about2.png';
 import about3 from '../../assets/images/about3.png';
 import about4 from '../../assets/images/about4.png';
+import { Helmet } from "react-helmet";
 
 
 const About = () => {
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Food Sharing | About</title>
+            </Helmet>
+
             <div className="hero" style={{ backgroundImage: `url(${banner})`, backgroundAttachment: 'fixed' }}>
                 <div className="hero-overlay bg-opacity-60 bg-white"></div>
                 <div className='container mx-auto px-5 py-28 md:py-44 flex flex-col lg:flex-row gap-10'>

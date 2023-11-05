@@ -2,11 +2,16 @@ import { FaGripfire } from "react-icons/fa";
 import contact from '../../assets/images/contact.png';
 import contact1 from '../../assets/images/contact1.png';
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 
 const Contact = () => {
     return (
         <div className="mt-10">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Food Sharing | Contact Us</title>
+            </Helmet>
             <div className="container mx-auto px-5 pt-5 py-20">
                 <div className="flex flex-col lg:flex-row gap-20">
                     <div className="flex-1">
