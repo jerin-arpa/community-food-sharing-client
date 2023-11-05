@@ -1,5 +1,5 @@
 import { FaGripfire } from "react-icons/fa";
-import image from '../../../assets/images/about3.png';
+import image from '../../../assets/images/about2.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
