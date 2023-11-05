@@ -1,6 +1,8 @@
 import { FaGripfire } from "react-icons/fa";
 import contact from '../../assets/images/contact.png';
 import contact1 from '../../assets/images/contact1.png';
+import { motion } from "framer-motion";
+
 
 const Contact = () => {
     return (
@@ -34,16 +36,24 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <div className="flex-1">
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1, delay: 0.2 }}
+                        className="flex-1">
                         <img className="w-full" src={contact} alt="" />
-                    </div>
+                    </motion.div>
                 </div>
 
 
                 <div className="flex flex-col-reverse lg:flex-row gap-20 mt-16">
-                    <div className="flex-1">
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1, delay: 0.2 }}
+                        className="flex-1">
                         <img className="w-full" src={contact1} alt="" />
-                    </div>
+                    </motion.div>
 
                     <div className="border rounded-xl p-14 flex-1">
                         <div>
