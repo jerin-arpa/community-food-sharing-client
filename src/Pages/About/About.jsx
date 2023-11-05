@@ -57,7 +57,7 @@ const About = () => {
                                 <div>
                                     <FaGripfire className="text-2xl text-[#23ad0e]"></FaGripfire>
                                 </div>
-                                <p className="mb-4 text-xl text-center">Community Food Sharing</p>
+                                <p className="mb-4 text-xl text-center">Food Sharing</p>
                             </div>
                         </motion.div>
                         <motion.div

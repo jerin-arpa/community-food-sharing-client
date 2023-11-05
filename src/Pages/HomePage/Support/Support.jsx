@@ -28,10 +28,10 @@ const Support = () => {
 
 
     useEffect(() => {
-        const controls1 = animate(count1, 455860, { duration: 3 });
-        const controls2 = animate(count2, 2052, { duration: 3 });
-        const controls3 = animate(count3, 22780, { duration: 3 });
-        const controls4 = animate(count4, 1707400, { duration: 3 });
+        const controls1 = animate(count1, 455860, { duration: 20 });
+        const controls2 = animate(count2, 2052, { duration: 20 });
+        const controls3 = animate(count3, 22780, { duration: 20 });
+        const controls4 = animate(count4, 1707400, { duration: 20 });
 
 
         return () => {
@@ -54,7 +54,7 @@ const Support = () => {
                                 <div>
                                     <FaGripfire className="text-2xl text-[#23ad0e]"></FaGripfire>
                                 </div>
-                                <p className="mb-4 text-xl text-white">Community Food Sharing</p>
+                                <p className="mb-4 text-xl text-white">Food Sharing</p>
                             </div>
                             <div>
                                 <h1 className="mb-5 text-3xl lg:text-6xl font-bold text-white text-center">Be aHand Proud to Say, After Providing The Best Non-Profit Support.</h1>

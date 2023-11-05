@@ -33,7 +33,7 @@ const Banner = () => {
                                             <div className="flex">
                                                 <FaGripfire className="text-2xl text-[#23ad0e]"></FaGripfire>
                                             </div>
-                                            <p className="mb-4 text-xl">Community Food Sharing</p>
+                                            <p className="mb-4 text-xl">Food Sharing</p>
                                         </motion.div>
                                         <motion.div
                                             initial={{ opacity: 0, x: -20 }}
@@ -84,7 +84,7 @@ const Banner = () => {
                                             <div className="flex">
                                                 <FaGripfire className="text-2xl text-[#23ad0e]"></FaGripfire>
                                             </div>
-                                            <p className="mb-4 text-xl">Community Food Sharing</p>
+                                            <p className="mb-4 text-xl">Food Sharing</p>
                                         </motion.div>
                                         <motion.div
                                             initial={{ opacity: 0, x: -20 }}
@@ -135,7 +135,7 @@ const Banner = () => {
                                             <div className="flex">
                                                 <FaGripfire className="text-2xl text-[#23ad0e]"></FaGripfire>
                                             </div>
-                                            <p className="mb-4 text-xl">Community Food Sharing</p>
+                                            <p className="mb-4 text-xl">Food Sharing</p>
                                         </motion.div>
 
                                         <motion.div
@@ -188,7 +188,7 @@ const Banner = () => {
                                             <div className="flex">
                                                 <FaGripfire className="text-2xl text-[#23ad0e]"></FaGripfire>
                                             </div>
-                                            <p className="mb-4 text-xl">Community Food Sharing</p>
+                                            <p className="mb-4 text-xl">Food Sharing</p>
                                         </motion.div>
 
                                         <motion.div
@@ -203,7 +203,7 @@ const Banner = () => {
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ duration: 1, delay: 0.5 }}
                                         >
-                                            <p className="mb-5">Experience the joy of community food sharing as neighbors come together to share homemade dishes, foster friendships, and support one another.</p>
+                                            <p className="mb-5">Experience the joy of Food Sharing as neighbors come together to share homemade dishes, foster friendships, and support one another.</p>
                                         </motion.div>
 
                                         <motion.div

@@ -2,7 +2,7 @@ function App() {
 
   return (
     <>
-      <h1>Community Food Sharing</h1>
+      <h1>Food Sharing</h1>
     </>
   )
 }
