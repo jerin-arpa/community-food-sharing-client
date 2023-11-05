@@ -1,14 +1,11 @@
 import { FaGripfire } from "react-icons/fa";
-
+import contact from '../../assets/images/contact.png';
+import contact1 from '../../assets/images/contact1.png';
 
 const Contact = () => {
     return (
-        <div>
-            <div className="container mx-auto px-5 py-10">
-                <iframe className="w-full h-96" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57903.05970633717!2d91.86103560000002!3d24.899986149999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375054d3d270329f%3A0xf58ef93431f67382!2sSylhet!5e0!3m2!1sen!2sbd!4v1697648860464!5m2!1sen!2sbd"></iframe>
-            </div>
-
-            <div className="container mx-auto px-5 pt-5 pb-20">
+        <div className="mt-10">
+            <div className="container mx-auto px-5 pt-5 py-20">
                 <div className="flex flex-col lg:flex-row gap-20">
                     <div className="flex-1">
                         <div>
@@ -16,9 +13,9 @@ const Contact = () => {
                                 <div className="flex">
                                     <FaGripfire className="text-2xl text-[#23ad0e]"></FaGripfire>
                                 </div>
-                                <p className="mb-4 text-xl">Contact WIth Us</p>
+                                <p className="mb-4 text-xl">Contact With Us</p>
                             </div>
-                            <h1 className="mb-5 text-3xl lg:text-5xl font-bold">Get in Touch</h1>
+                            <h1 className="mb-5 text-3xl lg:text-5xl font-bold">Drop us a <span className="text-[#23ad0e]">line below</span></h1>
                             <p className="mb-5">Top rated construction packages we pleasure rationally encounter
                                 consequences interesting who loves or pursue or desires.</p>
                         </div>
@@ -31,10 +28,21 @@ const Contact = () => {
                                 <input type="text" placeholder="Your Email" className="input input-bordered w-full" />
                             </div>
                             <div className=" mb-6">
-                                <textarea className="textarea textarea-bordered  textarea-lg w-full max-w-2xl" placeholder="Bio"></textarea>
+                                <textarea className="textarea textarea-bordered  textarea-lg w-full" placeholder="Bio"></textarea>
                             </div>
-                            <button className="btn bg-[#23ad0e] border-[#23ad0e] text-white hover:bg-white hover:text-[#23ad0e] hover:border-[#23ad0e] px-14">Send Message</button>
+                            <button className="btn w-full bg-[#23ad0e] border-[#23ad0e] text-white hover:bg-white hover:text-[#23ad0e] hover:border-[#23ad0e] px-14">Submit</button>
                         </div>
+                    </div>
+
+                    <div className="flex-1">
+                        <img className="w-full" src={contact} alt="" />
+                    </div>
+                </div>
+
+
+                <div className="flex flex-col-reverse lg:flex-row gap-20 mt-16">
+                    <div className="flex-1">
+                        <img className="w-full" src={contact1} alt="" />
                     </div>
 
                     <div className="border rounded-xl p-14 flex-1">
@@ -59,6 +67,11 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+
+
+            <div className="container mx-auto px-5 py-10">
+                <iframe className="w-full h-96" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57903.05970633717!2d91.86103560000002!3d24.899986149999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375054d3d270329f%3A0xf58ef93431f67382!2sSylhet!5e0!3m2!1sen!2sbd!4v1697648860464!5m2!1sen!2sbd"></iframe>
             </div>
         </div >
     );
