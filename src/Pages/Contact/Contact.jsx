@@ -39,7 +39,7 @@ const Contact = () => {
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1, delay: 0.2 }}
+                        transition={{ duration: 1, delay: 0.5 }}
                         className="flex-1">
                         <img className="w-full" src={contact} alt="" />
                     </motion.div>
@@ -50,7 +50,7 @@ const Contact = () => {
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1, delay: 0.2 }}
+                        transition={{ duration: 1, delay: 0.5 }}
                         className="flex-1">
                         <img className="w-full" src={contact1} alt="" />
                     </motion.div>
@@ -80,7 +80,7 @@ const Contact = () => {
             </div>
 
 
-            <div className="container mx-auto px-5 py-10">
+            <div className="py-10">
                 <iframe className="w-full h-96" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57903.05970633717!2d91.86103560000002!3d24.899986149999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375054d3d270329f%3A0xf58ef93431f67382!2sSylhet!5e0!3m2!1sen!2sbd!4v1697648860464!5m2!1sen!2sbd"></iframe>
             </div>
         </div >
