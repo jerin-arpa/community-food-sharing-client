@@ -112,13 +112,13 @@ const FoodDetails = () => {
                                 {/*modal */}
                                 <button onClick={() => document.getElementById('my_modal_4').showModal()} className="btn w-full bg-[#23ad0e] border-[#23ad0e] hover:bg-white hover:text-[#23ad0e] text-white hover:border-[#23ad0e] mt-5">Request Food</button>
 
-                                <form onSubmit={handleRequestFood}>
-                                    <dialog id="my_modal_4" className="modal">
-                                        <div className="modal-box w-11/12 max-w-5xl">
-                                            <form method="dialog">
-                                                <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                                            </form>
+                                <dialog id="my_modal_4" className="modal">
+                                    <div className="modal-box w-11/12 max-w-5xl">
+                                        <form method="dialog">
+                                            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                                        </form>
 
+                                        <form onSubmit={handleRequestFood}>
                                             {/* Modal Information */}
                                             <div>
                                                 <div data-aos="fade-down" data-aos-duration="3000" className="flex flex-col md:flex-row gap-5 mt-10">
@@ -182,7 +182,7 @@ const FoodDetails = () => {
                                                         </div>
 
                                                         <div>
-                                                            <div className='flex gap-2 text-lg'>
+                                                            <div className='flex gap-2 text-lg mb-2'>
                                                                 <div className='flex items-center text-[#23ad0e]'>
                                                                     <FaDonate></FaDonate>
                                                                 </div>
@@ -221,9 +221,9 @@ const FoodDetails = () => {
                                                     <button className="btn w-full bg-[#23ad0e] border-[#23ad0e] hover:bg-white hover:text-[#23ad0e] text-white hover:border-[#23ad0e]">Request Food</button>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </dialog>
-                                </form>
+                                        </form>
+                                    </div>
+                                </dialog>
                             </div>
                         </div>
                     </div>
