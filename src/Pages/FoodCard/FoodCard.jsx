@@ -3,11 +3,19 @@ import { FaUserCircle } from 'react-icons/fa';
 import { BsFillCalendar2DateFill } from 'react-icons/bs';
 import { FaLocationDot } from 'react-icons/fa6';
 import { MdProductionQuantityLimits } from 'react-icons/md';
+import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 
 const FoodCard = ({ food }) => {
 
-    const { foodName, quantity, pickUpLocation, foodImage, date, note, donatorImage, donatorName } = food;
+    useEffect(() => {
+        AOS.init();
+    }, []);
+
+    const { _id, foodName, quantity, pickUpLocation, foodImage, date, note, donatorImage, donatorName } = food;
 
     return (
         <div className='rounded-xl shadow-xl'>
@@ -31,7 +39,7 @@ const FoodCard = ({ food }) => {
                         <div className='flex items-center text-[#23ad0e]'>
                             <BsFillCalendar2DateFill></BsFillCalendar2DateFill>
                         </div>
-                        <p><span className='font-bold'>Expire Date:</span> {date}</p>
+                        <p><span className='font-bold'>Expired Date:</span> {date}</p>
                     </div>
                     <p className='mt-2'>{note}</p>
 
@@ -53,7 +61,9 @@ const FoodCard = ({ food }) => {
                 </div>
 
                 <div className='flex justify-center mt-4'>
-                    <button className="btn w-full bg-[#23ad0e] border-[#23ad0e] hover:bg-white hover:text-[#23ad0e] text-white hover:border-[#23ad0e]">View Details</button>
+                    <Link className='w-full' to={`/foodDetails/${_id}`}>
+                        <button className="btn w-full bg-[#23ad0e] border-[#23ad0e] hover:bg-white hover:text-[#23ad0e] text-white hover:border-[#23ad0e]">View Details</button>
+                    </Link>
                 </div>
             </div>
         </div>

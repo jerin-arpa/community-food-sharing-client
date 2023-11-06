@@ -2,11 +2,13 @@ import { useContext } from "react";
 import { Helmet } from "react-helmet";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 
 const AddFood = () => {
 
     const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleAddFood = event => {
         event.preventDefault();
@@ -50,6 +52,7 @@ const AddFood = () => {
                         timer: 1500
                     });
                     form.reset();
+                    navigate('/availableFoods')
                 }
             })
     }
@@ -153,7 +156,7 @@ const AddFood = () => {
                                     <span className="label-text">Donator Image</span>
                                 </label>
                                 <input type="text" name="donatorImage"
-                                    defaultValue={user?.photoURL} className="input input-bordered" required />
+                                    defaultValue={user?.photoURL} className="input input-bordered" />
                             </div>
                         </div>
 
