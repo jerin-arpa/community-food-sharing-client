@@ -3,9 +3,17 @@ import { Helmet } from "react-helmet";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
-
+import { FaGripfire } from "react-icons/fa";
+import image from '../../assets/images/about4.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const AddFood = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, []);
 
     const { user } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -64,6 +72,30 @@ const AddFood = () => {
                 <meta charSet="utf-8" />
                 <title>Food Sharing | Add Food</title>
             </Helmet>
+
+
+            <div>
+                <div className="hero" style={{ backgroundImage: `url(${image})` }}>
+                    <div className="hero-overlay bg-opacity-60 bg-white"></div>
+                    <div
+                        data-aos="fade-up" data-aos-duration="3000" className='container mx-auto px-5  py-32'>
+                        <div className='mb-10'>
+                            <div className="flex justify-center gap-3">
+                                <div>
+                                    <FaGripfire className="text-2xl text-[#23ad0e]"></FaGripfire>
+                                </div>
+                                <p className="mb-6 text-xl text-[#23ad0e]">Food Sharing</p>
+                            </div>
+                            <div>
+                                <h1 className="mb-5 text-3xl lg:text-6xl font-bold text-black text-center">SHARE THE LOVE &<span className="text-[#23ad0e]">  ADD A FOOD </span></h1>
+
+
+                                <p className="font-bold text-xl text-center">At our community food-sharing website, we believe in the power of sharing, and we have made it even easier with our Add Food in a Card feature. It is like sending a delicious gift to your neighbors and fellow food enthusiasts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
             <div className="container mx-auto px-5 mb-20">

@@ -61,7 +61,7 @@ const FoodDetails = () => {
                         icon: 'success',
                         confirmButtonText: 'OK'
                     });
-                    navigate('/availableFoods');
+                    navigate('/foodRequest');
                 }
             })
     }

@@ -5,8 +5,16 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { FaGripfire } from "react-icons/fa";
 import { BsFillEmojiSmileFill } from "react-icons/bs";
 import FoodRequestCard from "../FoodRequestCard/FoodRequestCard";
+import image from '../../assets/images/about4.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const FoodRequest = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, []);
 
     const { user } = useContext(AuthContext);
     const foods = useLoaderData();
@@ -22,21 +30,29 @@ const FoodRequest = () => {
             </Helmet>
 
             <div>
-                <div className='mt-10'>
-                    <div className="flex justify-center gap-3">
-                        <div className="flex">
-                            <FaGripfire className="text-2xl text-[#23ad0e]"></FaGripfire>
-                        </div>
-                        <p className="mb-4 text-xl">My Request</p>
-                    </div>
-                    <div className="flex justify-center">
-                        <h1 className="mb-5 text-3xl lg:text-5xl font-bold text-center w-2/3">My Food Request Collections</h1>
-                    </div>
-                </div>
-                <div className='container mx-auto px-5 mt-5'>
-                    <hr />
-                </div>
+                <div className="hero" style={{ backgroundImage: `url(${image})` }}>
+                    <div className="hero-overlay bg-opacity-60 bg-white"></div>
+                    <div
+                        data-aos="fade-down" data-aos-duration="3000" className='container mx-auto px-5 py-32'>
+                        <div className='mb-10'>
+                            <div className="flex justify-center gap-3">
+                                <div>
+                                    <FaGripfire className="text-2xl text-[#23ad0e]"></FaGripfire>
+                                </div>
+                                <p className="mb-6 text-xl text-[#23ad0e]">Food Sharing</p>
+                            </div>
+                            <div>
+                                <h1 className="mb-5 text-3xl lg:text-6xl font-bold text-black text-center">MY  <span className="text-[#23ad0e]"> FOOD REQUEST </span>COLLECTIONS</h1>
 
+
+                                <p className="font-bold text-xl text-center">In our community food-sharing website, we understand that sometimes,. That is why we have introduced the Food Request feature, a unique way to satisfy your cravings and connect with our passionate culinary community.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
                 <div className="container mx-auto px-5">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-14">
                         {
