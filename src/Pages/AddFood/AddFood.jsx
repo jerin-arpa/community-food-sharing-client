@@ -1,7 +1,60 @@
+import { useContext } from "react";
 import { Helmet } from "react-helmet";
+import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const AddFood = () => {
+
+    const { user } = useContext(AuthContext);
+
+    const handleAddFood = event => {
+        event.preventDefault();
+        const form = event.target;
+
+        // Food Information
+        const foodName = form.foodName.value;
+        const quantity = form.quantity.value;
+        const pickUpLocation = form.location.value;
+        const foodImage = form.foodImage.value;
+        const date = form.date.value;
+        const status = form.status.value;
+        const note = form.note.value;
+
+        // Donator Information
+        const donatorImage = user?.photoURL;
+        const donatorName = user?.displayName;
+        const email = user?.email;
+
+        const addFoodInfo = { foodName, quantity, pickUpLocation, foodImage, date, status, note, donatorImage, donatorName, email };
+
+        console.log(addFoodInfo);
+
+
+        fetch('http://localhost:5000/food', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(addFoodInfo),
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        title: "Food Added Successfully",
+                        showConfirmButton: true,
+                        timer: 1500
+                    });
+                    form.reset();
+                }
+            })
+    }
+
+
     return (
         <div>
             <Helmet>
@@ -12,10 +65,11 @@ const AddFood = () => {
 
             <div className="container mx-auto px-5 mb-20">
                 <div className="flex justify-center">
-                    <form className="w-full lg:w-2/3 mt-16 border p-10 pb-14 rounded-xl">
+                    <form onSubmit={handleAddFood} className="w-full lg:w-2/3 mt-16 border p-10 pb-14 rounded-xl">
                         <h2 className="text-4xl font-bold text-center pb-5"><span>ADD</span> <span className="text-[#23ad0e]">A FOOD</span></h2>
                         <hr className="my-5" />
 
+                        {/* Food Information */}
                         <h2 className="text-xl font-bold pb-1">FOOD INFORMATION</h2>
                         <div>
                             <hr className="w-1/5 h-2 bg-[#23ad0e] mb-5" />
@@ -26,7 +80,7 @@ const AddFood = () => {
                                     <label className="label">
                                         <span className="label-text">Food Name</span>
                                     </label>
-                                    <input type="text" name="name" placeholder="Enter Food name" className="input input-bordered" required />
+                                    <input type="text" name="foodName" placeholder="Enter Food name" className="input input-bordered" required />
                                 </div>
 
 
@@ -52,7 +106,7 @@ const AddFood = () => {
                                         <label className="label">
                                             <span className="label-text">Food Image</span>
                                         </label>
-                                        <input type="text" name="image" placeholder="Enter product image" className="input input-bordered" required />
+                                        <input type="text" name="foodImage" placeholder="Enter product image" className="input input-bordered" required />
                                     </div>
                                 </div>
 
@@ -87,6 +141,7 @@ const AddFood = () => {
                         </div>
 
 
+                        {/* Donator Information */}
                         <h2 className="text-xl font-bold pb-1 mt-10">DONATOR INFORMATION</h2>
                         <div>
                             <hr className="w-1/5 h-2 bg-[#23ad0e] mb-5" />
@@ -97,7 +152,8 @@ const AddFood = () => {
                                 <label className="label">
                                     <span className="label-text">Donator Image</span>
                                 </label>
-                                <input type="text" name="note" placeholder="Enter your Image" className="input input-bordered" required />
+                                <input type="text" name="donatorImage"
+                                    defaultValue={user?.photoURL} className="input input-bordered" required />
                             </div>
                         </div>
 
@@ -105,16 +161,16 @@ const AddFood = () => {
                         <div className="flex flex-col lg:flex-row gap-10">
                             <div className="form-control w-full">
                                 <label className="label">
-                                    <span className="label-text">Donator Image</span>
+                                    <span className="label-text">Donator Name</span>
                                 </label>
-                                <input type="text" name="note" placeholder="Enter your Image" className="input input-bordered" required />
+                                <input type="text" name="donatorName" defaultValue={user?.displayName} className="input input-bordered" required />
                             </div>
 
                             <div className="form-control w-full">
                                 <label className="label">
-                                    <span className="label-text">Donator Image</span>
+                                    <span className="label-text">Donator Email</span>
                                 </label>
-                                <input type="text" name="note" placeholder="Enter your Image" className="input input-bordered" required />
+                                <input type="email" name="email" defaultValue={user?.email} className="input input-bordered" required />
                             </div>
                         </div>
 
