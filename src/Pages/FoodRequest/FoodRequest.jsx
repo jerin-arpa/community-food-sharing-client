@@ -53,7 +53,7 @@ const FoodRequest = () => {
             </div>
 
             <div>
-                <div className="container mx-auto px-5">
+                <div className="container mx-auto px-5 my-10">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-14">
                         {
                             myFoodRequest.length === 0 ? <div className="col-span-3 flex justify-center">
@@ -62,7 +62,7 @@ const FoodRequest = () => {
                                         <BsFillEmojiSmileFill className="text-9xl text-[#ffcc33] mb-5"></BsFillEmojiSmileFill>
                                     </div>
                                     <h2 className="
-                         text-4xl font-bold text-[#23ad0e] text-center"> There are currently <br /> no products added to the cart. </h2>
+                         text-4xl font-bold text-[#23ad0e] text-center"> There are currently <br /> no food request. </h2>
                                 </div>
                             </div>
                                 :

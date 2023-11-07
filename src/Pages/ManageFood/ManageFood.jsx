@@ -3,7 +3,11 @@ import { FaGripfire } from "react-icons/fa";
 import image from '../../assets/images/about3.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
+import { BsFillEmojiSmileFill } from "react-icons/bs";
+import ManageFoodCard from "../ManageFoodCard/ManageFoodCard";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const ManageFood = () => {
@@ -12,7 +16,13 @@ const ManageFood = () => {
         AOS.init();
     }, []);
 
+    const { user } = useContext(AuthContext);
 
+    const foods = useLoaderData();
+    console.log(foods)
+    const userFoods = foods.filter(item => item.email.toLowerCase() === user.email.toLowerCase());
+    console.log(userFoods);
+    const [myFood, setMyFood] = useState(userFoods);
 
     return (
         <div>
@@ -50,8 +60,25 @@ const ManageFood = () => {
             </div>
 
 
-            <div>
-
+            <div className='container mx-auto px-5 my-10'>
+                {
+                    myFood.length === 0 ? <div className="col-span-2 flex justify-center">
+                        <div>
+                            <div className="flex justify-center">
+                                <BsFillEmojiSmileFill className="text-9xl text-[#ffcc33] mb-5"></BsFillEmojiSmileFill>
+                            </div>
+                            <h2 className="
+                         text-4xl font-bold text-[#23ad0e] text-center"> There are currently <br /> no food added by you. </h2>
+                        </div>
+                    </div>
+                        :
+                        myFood.map(food => <ManageFoodCard
+                            key={food._id}
+                            food={food}
+                            myFood={myFood}
+                            setMyFood={setMyFood}
+                        ></ManageFoodCard>)
+                }
             </div>
         </div>
     );
