@@ -45,7 +45,7 @@ const FoodRequest = () => {
                                 <h1 className="mb-5 text-3xl lg:text-6xl font-bold text-black text-center">MY  <span className="text-[#23ad0e]"> FOOD REQUEST </span>COLLECTIONS</h1>
 
 
-                                <p className="font-bold text-xl text-center">In our community food-sharing website, we understand that sometimes,. That is why we have introduced the Food Request feature, a unique way to satisfy your cravings and connect with our passionate culinary community.</p>
+                                <p className="font-bold text-xl text-center text-black">In our community food-sharing website, we understand that sometimes,. That is why we have introduced the Food Request feature, a unique way to satisfy your cravings and connect with our passionate culinary community.</p>
                             </div>
                         </div>
                     </div>

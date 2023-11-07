@@ -1,10 +1,19 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { FaGripfire } from 'react-icons/fa';
 import image from '../../assets/images/about1.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 
 const ManageSingleFood = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, []);
+
+
     return (
         <div>
             <Helmet>
@@ -29,7 +38,7 @@ const ManageSingleFood = () => {
                                 <h1 className="mb-5 text-3xl lg:text-6xl font-bold text-black text-center">MANAGE A<span className="text-[#23ad0e]"> SINGLE FOOD </span></h1>
 
 
-                                <p className="font-bold text-xl text-center">At our community food-sharing website, we believe in the power of sharing, and we have made it even easier with our Add Food in a Card feature. It is like sending a delicious gift to your neighbors and fellow food enthusiasts.</p>
+                                <p className="font-bold text-xl text-center text-black">At our community food-sharing website, we believe in the power of sharing, and we have made it even easier with our Add Food in a Card feature. It is like sending a delicious gift to your neighbors and fellow food enthusiasts.</p>
                             </div>
                         </div>
                     </div>

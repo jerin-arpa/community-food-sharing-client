@@ -30,14 +30,14 @@ const About = () => {
                                 <div className="flex">
                                     <FaGripfire className="text-2xl text-[#23ad0e]"></FaGripfire>
                                 </div>
-                                <p className="mb-4 text-xl">About Us</p>
+                                <p className="mb-4 text-xl text-black">About Us</p>
                             </motion.div>
                             <motion.div
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1, delay: 0.4 }}
                             >
-                                <h1 className="mb-5 text-3xl lg:text-6xl font-bold">About Community  <span className='text-[#23ad0e]'><br /> Food Sharing</span></h1>
+                                <h1 className="mb-5 text-3xl lg:text-6xl font-bold text-black">About Community  <span className='text-[#23ad0e]'><br /> Food Sharing</span></h1>
                             </motion.div>
                         </div>
                     </div>
@@ -204,14 +204,14 @@ const About = () => {
                                 <div>
                                     <FaGripfire className="text-2xl text-[#23ad0e]"></FaGripfire>
                                 </div>
-                                <p className="mb-4 text-xl">Work On</p>
+                                <p className="mb-4 text-xl text-black">Work On</p>
                             </motion.div>
                             <motion.div
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1, delay: 0.4 }}
                             >
-                                <h1 className="mb-5 text-3xl lg:text-6xl text-center  font-bold">We Work As a Charity, Social, Non-profit, NGO, Foundarisign Organization.</h1>
+                                <h1 className="mb-5 text-3xl lg:text-6xl text-center  font-bold text-black">We Work As a Charity, Social, Non-profit, NGO, Foundarisign Organization.</h1>
                             </motion.div>
 
                             <motion.div
