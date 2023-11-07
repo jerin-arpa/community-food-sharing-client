@@ -9,9 +9,11 @@ Project Link: [https://fashion-fusion-hub-clint.web.app ](https://fashion-fusion
 
 Here are some key features of my project:
 
-1. Product Listings:
+1. Food Listings:
 
     * The homepage features an intuitive design with the logos and highest quantity featured food with proper information.
+    * Enable users to list surplus food items they want to share or donate.
+    * Include details such as food name, quantity, expiry date, and dietary labels (e.g., vegan, gluten-free).
     * Users can click on their preferred food to access the food-specific product listings.
     * Each food product section includes high-quality images, detailed product descriptions, and pricing information.
     * Users have the option to filter or search for specific products within each food name, making it easy to find what they're looking for.
