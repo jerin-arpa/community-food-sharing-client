@@ -37,6 +37,8 @@ const FoodDetails = () => {
         console.log(donationMoney, additionalNotes);
 
         const newFood = {
+            // userName: user?.displayName,
+            // userImage: user?.photoURL,
             userEmail: user?.email,
             food,
             requestDate,

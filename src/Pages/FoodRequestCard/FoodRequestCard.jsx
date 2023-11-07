@@ -104,7 +104,12 @@ const FoodRequestCard = ({ foodRequest, myFoodRequest, setMyFoodRequest }) => {
 
 
             <div>
-                <button onClick={() => handleDelete(_id)} className="btn w-full bg-[#23ad0e] border-[#23ad0e] hover:bg-white hover:text-[#23ad0e] text-white hover:border-[#23ad0e] mt-5 mb-3">Cancel Request</button>
+                {
+                    food.status === 'Delivered' ?
+                        <button disabled onClick={() => handleDelete(_id)} className="btn w-full bg-[#23ad0e] border-[#23ad0e] hover:bg-white hover:text-[#23ad0e] text-white hover:border-[#23ad0e] mt-5 mb-3">Cancel Request</button>
+                        :
+                        <button onClick={() => handleDelete(_id)} className="btn w-full bg-[#23ad0e] border-[#23ad0e] hover:bg-white hover:text-[#23ad0e] text-white hover:border-[#23ad0e] mt-5 mb-3">Cancel Request</button>
+                }
             </div>
         </div>
     );

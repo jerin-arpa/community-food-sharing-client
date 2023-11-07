@@ -18,7 +18,7 @@ const UpdateFood = () => {
 
     const navigate = useNavigate();
     const foods = useLoaderData();
-    const { _id, foodName, quantity, pickUpLocation, foodImage, date, status, note, donatorImage, donatorName, email } = foods;
+    const { _id, foodName, quantity, pickUpLocation, foodImage, date, note, donatorImage, donatorName, email } = foods;
 
 
     const handleUpdateFood = event => {
@@ -156,24 +156,19 @@ const UpdateFood = () => {
                                 </div>
 
 
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Food Status</span>
-                                    </label>
-                                    <input type="text" name="status" defaultValue={status} className="input input-bordered" required />
+                                <div className="w-full">
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text">Additional Note</span>
+                                        </label>
+                                        <input type="text" name="note" defaultValue={note} className="input input-bordered" required />
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
 
 
-                        <div className="w-full">
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Additional Note</span>
-                                </label>
-                                <input type="text" name="note" defaultValue={note} className="input input-bordered" required />
-                            </div>
-                        </div>
 
 
                         {/* Donator Information */}

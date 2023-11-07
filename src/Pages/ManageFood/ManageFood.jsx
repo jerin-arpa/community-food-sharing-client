@@ -69,12 +69,10 @@ const ManageFood = () => {
                         </div>
                     </div>
                         :
-                        myFood.map(food => <ManageFoodCard
-                            key={food._id}
-                            food={food}
+                        <ManageFoodCard
                             myFood={myFood}
                             setMyFood={setMyFood}
-                        ></ManageFoodCard>)
+                        ></ManageFoodCard>
                 }
             </div>
         </div>
