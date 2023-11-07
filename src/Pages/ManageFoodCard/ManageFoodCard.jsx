@@ -6,10 +6,6 @@ import ManageFoodTable from '../ManageFoodTable/ManageFoodTable';
 
 const tableColumn = [
     {
-        Header: "Id",
-        accessor: '_id',
-    },
-    {
         Header: "Food Name",
         accessor: 'foodName',
     },

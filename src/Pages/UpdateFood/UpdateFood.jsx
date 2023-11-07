@@ -31,7 +31,6 @@ const UpdateFood = () => {
         const pickUpLocation = form.location.value;
         const foodImage = form.foodImage.value;
         const date = form.date.value;
-        const status = form.status.value;
         const note = form.note.value;
 
         // Donator Information
