@@ -19,9 +19,9 @@ const FoodCard = ({ food }) => {
 
     return (
         <div className='rounded-xl shadow-xl'>
-            <img data-aos="fade-down" data-aos-duration="3000" src={foodImage} alt="" />
+            <img data-aos="fade-down" data-aos-duration="3000" className='w-full h-64' src={foodImage} alt="" />
             <div data-aos="fade-up" data-aos-duration="3000" className='p-5 pb-8'>
-                <div>
+                <div className='h-56'>
                     <h2 className='text-2xl font-bold mb-2'>{foodName}</h2>
                     <div className='flex gap-2 text-lg'>
                         <div className='flex items-center text-[#23ad0e]'>
@@ -46,17 +46,19 @@ const FoodCard = ({ food }) => {
                 </div>
                 <hr className='my-4' />
 
-                <div className='flex gap-2'>
-                    {
-                        donatorImage ? (
-                            <img className="w-14 rounded-full" src={donatorImage} alt="" />
-                        ) : (
-                            <FaUserCircle className="text-4xl">
-                            </FaUserCircle>
-                        )
-                    }
-                    <div className='flex items-center'>
-                        <h2 className='text-lg font-bold uppercase'>{donatorName}</h2>
+                <div className='h-14'>
+                    <div className='flex gap-2'>
+                        {
+                            donatorImage ? (
+                                <img className="w-14 rounded-full" src={donatorImage} alt="" />
+                            ) : (
+                                <FaUserCircle className="text-5xl">
+                                </FaUserCircle>
+                            )
+                        }
+                        <div className='flex items-center'>
+                            <h2 className='text-lg font-bold uppercase'>{donatorName}</h2>
+                        </div>
                     </div>
                 </div>
 

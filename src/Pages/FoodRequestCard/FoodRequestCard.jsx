@@ -4,8 +4,16 @@ import { FaDonate } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
 import { VscLayoutStatusbar } from 'react-icons/vsc';
 import Swal from 'sweetalert2';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+
 
 const FoodRequestCard = ({ foodRequest, myFoodRequest, setMyFoodRequest }) => {
+
+    useEffect(() => {
+        AOS.init();
+    }, []);
 
     const { food, donationMoney, requestDate } = foodRequest;
     const { _id } = foodRequest;
@@ -32,7 +40,7 @@ const FoodRequestCard = ({ foodRequest, myFoodRequest, setMyFoodRequest }) => {
                             if (data.deletedCount > 0) {
                                 Swal.fire(
                                     'Deleted!',
-                                    'Your product has been deleted.',
+                                    'Your food request has been canceled.',
                                     'success'
                                 )
                                 const remaining = myFoodRequest.filter(request => request._id !== _id)
@@ -44,7 +52,7 @@ const FoodRequestCard = ({ foodRequest, myFoodRequest, setMyFoodRequest }) => {
     }
 
     return (
-        <div className='border border-[#23ad0e] p-5 rounded-xl text-center'>
+        <div data-aos="fade-up" data-aos-duration="3000" className='border border-[#23ad0e] p-5 rounded-xl text-center'>
             <h2 className='font-bold text-2xl mb-2'>{food.foodName}</h2>
 
             <h2><span className='font-bold text-xl'>Donator:</span> <span className='text-xl font-bold uppercase'>{food.donatorName}</span></h2>

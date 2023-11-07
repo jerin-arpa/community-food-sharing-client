@@ -57,11 +57,11 @@ const FoodDetails = () => {
                 if (data.insertedId) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Product added successfully',
+                        text: 'Request Send successfully',
                         icon: 'success',
                         confirmButtonText: 'OK'
                     });
-                    navigate('/foodRequest');
+                    navigate('/availableFoods');
                 }
             })
     }
