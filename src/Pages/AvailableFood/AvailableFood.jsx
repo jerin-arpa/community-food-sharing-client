@@ -5,14 +5,43 @@ import { useLoaderData } from "react-router-dom";
 import FoodCard from "../FoodCard/FoodCard";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const AvailableFood = () => {
-
-    const foods = useLoaderData();
     useEffect(() => {
         AOS.init();
     }, []);
+
+    const [searchQuery, setSearchQuery] = useState('');
+    const [searchText, setSearchText] = useState('');
+    const [sortedFoods, setSortedFoods] = useState([]);
+    const [sortByDate, setSortByDate] = useState(false);
+
+    let foods = useLoaderData();
+
+    useEffect(() => {
+        if (sortByDate) {
+            const sorted = [...foods].filter(item => item.foodName.toLowerCase().includes(searchText.toLowerCase()));
+            sorted.sort((a, b) => new Date(a.date) - new Date(b.date));
+            setSortedFoods(sorted);
+        } else {
+            const filteredFoods = foods.filter(item => item.foodName.toLowerCase().includes(searchText.toLowerCase()));
+            setSortedFoods(filteredFoods);
+        }
+    }, [foods, sortByDate, searchText]);
+
+    const handleSearchChange = event => {
+        setSearchQuery(event.target.value);
+    };
+
+    const handleSearchButton = () => {
+        setSearchText(searchQuery);
+    };
+
+    const handleSortByDate = () => {
+        setSortByDate(!sortByDate);
+    };
+
 
     return (
         <div>
@@ -40,7 +69,7 @@ const AvailableFood = () => {
                                 <p className="font-bold text-xl text-center text-black">Step into our Available Food section and experience a delightful feast for all your senses</p>
 
                                 <div className="flex justify-center my-10">
-                                    <button className="btn w-1/4 bg-[#23ad0e] border-[#23ad0e] hover:bg-white hover:text-[#23ad0e] text-white hover:border-[#23ad0e]">Sort By Date</button>
+                                    <button onClick={handleSortByDate} className="btn w-1/4 bg-[#23ad0e] border-[#23ad0e] hover:bg-white hover:text-[#23ad0e] text-white hover:border-[#23ad0e]">Sort by Date</button>
                                 </div>
                             </div>
                         </div>
@@ -51,10 +80,14 @@ const AvailableFood = () => {
 
             <div className="my-10 container mx-auto px-5 mb-20">
                 <div data-aos="fade-right" data-aos-duration="3000" >
-                    <div className="flex justify-start  my-10 md:ml-0">
+                    <div className="flex justify-start lg:justify-center  my-10 md:ml-0">
                         <div className="relative w-1/3">
-                            <input type="email" placeholder="Search" className="input input-bordered w-20 md:w-full rounded-r-none" />
-                            <button className="btn bg-[#23ad0e] border-[#23ad0e] hover:bg-white hover:text-[#23ad0e] text-white absolute rounded-l-none hover:border-[#23ad0e]">Search</button>
+                            <input
+                                type="text"
+                                value={searchQuery}
+                                placeholder="Search"
+                                onChange={handleSearchChange} className="input input-bordered w-20 md:w-full rounded-r-none" />
+                            <button onClick={handleSearchButton} className="btn bg-[#23ad0e] border-[#23ad0e] hover:bg-white hover:text-[#23ad0e] text-white absolute rounded-l-none hover:border-[#23ad0e]">Search</button>
                         </div>
                     </div>
                 </div>
@@ -62,7 +95,7 @@ const AvailableFood = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {
-                        foods.map(food => <FoodCard
+                        sortedFoods.map(food => <FoodCard
                             key={food._id}
                             food={food}
                         ></FoodCard>)
