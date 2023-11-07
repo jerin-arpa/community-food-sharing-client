@@ -50,9 +50,6 @@ const ManageFood = () => {
 
                                 <p className="font-bold text-xl text-center text-black">Welcome to the heart of our community food sharing website. Whether you are a home chef, a food lover, or an organizer of local food events, our comprehensive management tools put you in charge.</p>
 
-                                <div className="flex justify-center my-10">
-                                    <button className="btn w-1/4 bg-[#23ad0e] border-[#23ad0e] hover:bg-white hover:text-[#23ad0e] text-white hover:border-[#23ad0e]">Sort By Date</button>
-                                </div>
                             </div>
                         </div>
                     </div>

@@ -6,7 +6,12 @@ import FoodCard from "../../FoodCard/FoodCard";
 const FeaturedFood = () => {
 
     const foods = useLoaderData();
-    console.log(foods);
+
+    // Sort the foods by quantity in descending order
+    const sortedFoods = [...foods].sort((a, b) => b.quantity - a.quantity);
+
+    // Get the top 6 foods by quantity
+    const topFoods = sortedFoods.slice(0, 6);
 
     return (
         <div className="container mx-auto px-5 py-10">
@@ -46,7 +51,7 @@ const FeaturedFood = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-14">
                 {
-                    foods.slice(0, 6).map(food => <FoodCard
+                    topFoods.map(food => <FoodCard
                         key={food._id}
                         food={food}
                     ></FoodCard>)

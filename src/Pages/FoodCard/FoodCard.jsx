@@ -19,7 +19,7 @@ const FoodCard = ({ food }) => {
 
     return (
         <div className='rounded-xl shadow-xl'>
-            <img data-aos="fade-down" data-aos-duration="3000" className='w-full h-64' src={foodImage} alt="" />
+            <img data-aos="fade-down" data-aos-duration="3000" className='w-full h-64 rounded-t-xl' src={foodImage} alt="" />
             <div data-aos="fade-up" data-aos-duration="3000" className='p-5 pb-8'>
                 <div className='h-56'>
                     <h2 className='text-2xl font-bold mb-2'>{foodName}</h2>

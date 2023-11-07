@@ -69,7 +69,7 @@ const AvailableFood = () => {
                                 <p className="font-bold text-xl text-center text-black">Step into our Available Food section and experience a delightful feast for all your senses</p>
 
                                 <div className="flex justify-center my-10">
-                                    <button onClick={handleSortByDate} className="btn w-1/4 bg-[#23ad0e] border-[#23ad0e] hover:bg-white hover:text-[#23ad0e] text-white hover:border-[#23ad0e]">Sort by Date</button>
+                                    <button onClick={handleSortByDate} className="btn w-full lg:w-1/4 bg-[#23ad0e] border-[#23ad0e] hover:bg-white hover:text-[#23ad0e] text-white hover:border-[#23ad0e]">Sort by Date</button>
                                 </div>
                             </div>
                         </div>
