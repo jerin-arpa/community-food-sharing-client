@@ -9,7 +9,7 @@ Project Link: [https://fashion-fusion-hub-clint.web.app ](https://fashion-fusion
 
 Here are some key features of my project:
 
-1. Brand-Based Product Listings:
+1. Product Listings:
 
     * The homepage features an intuitive design with the logos and highest quantity featured food with proper information.
     * Users can click on their preferred food to access the food-specific product listings.
