@@ -20,7 +20,6 @@ const FoodRequestCard = ({ foodRequest, myFoodRequest, setMyFoodRequest }) => {
     const { _id } = foodRequest;
 
     const handleDelete = _id => {
-        console.log(_id);
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -32,7 +31,7 @@ const FoodRequestCard = ({ foodRequest, myFoodRequest, setMyFoodRequest }) => {
         })
             .then((result) => {
                 if (result.isConfirmed) {
-                    fetch(`http://localhost:5000/requestFood/${_id}`, {
+                    fetch(`https://community-food-sharing-server-six.vercel.app/requestFood/${_id}`, {
                         method: 'DELETE',
                     })
                         .then(res => res.json())

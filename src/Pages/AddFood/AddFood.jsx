@@ -41,7 +41,7 @@ const AddFood = () => {
         console.log(addFoodInfo);
 
 
-        fetch('http://localhost:5000/food', {
+        fetch('https://community-food-sharing-server-six.vercel.app/food', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -91,7 +91,7 @@ const AddFood = () => {
 
 
                                 <div className="flex justify-center">
-                                    <p className="font-bold text-xl text-center text-black w-3/4">At our community food-sharing website, we believe in the power of sharing, and we have made it even easier with our Add Food in a Card feature. It is like sending a delicious gift to your neighbors and fellow food enthusiasts.</p>
+                                    <p className="font-bold text-xl text-center text-black w-full lg:w-3/4 ">At our community food-sharing website, we believe in the power of sharing, and we have made it even easier with our Add Food in a Card feature. It is like sending a delicious gift to your neighbors and fellow food enthusiasts.</p>
                                 </div>
                             </div>
                         </div>

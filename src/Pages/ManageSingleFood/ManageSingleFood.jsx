@@ -20,8 +20,6 @@ const ManageSingleFood = () => {
 
     const foods = useLoaderData();
     const { id } = useParams();
-    console.log(id);
-    console.log(foods);
     const userFoods = foods.filter(item => item.food._id === id);
     const [myFood, setMyFood] = useState(userFoods);
 
@@ -38,7 +36,7 @@ const ManageSingleFood = () => {
         })
             .then((result) => {
                 if (result.isConfirmed) {
-                    fetch(`http://localhost:5000/requestFood/${id}`, {
+                    fetch(`https://community-food-sharing-server-six.vercel.app/requestFood/${id}`, {
                         method: 'PATCH',
                         headers: {
                             'content-type': 'application/json'
@@ -91,7 +89,7 @@ const ManageSingleFood = () => {
 
 
                                 <div className='flex justify-center'>
-                                    <p className="font-bold text-xl text-center text-black w-3/4">At our community food-sharing website, we believe in the power of sharing, and we have made it even easier with our Add Food in a Card feature.</p>
+                                    <p className="font-bold text-xl text-center text-black w-full lg:w-3/4 ">At our community food-sharing website, we believe in the power of sharing, and we have made it even easier with our Add Food in a Card feature.</p>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +107,7 @@ const ManageSingleFood = () => {
                                     <BsFillEmojiSmileFill className="text-9xl text-[#ffcc33] mb-5"></BsFillEmojiSmileFill>
                                 </div>
                                 <h2 className="
-                         text-4xl font-bold text-[#23ad0e] text-center"> There are currently <br /> no food added by you. </h2>
+                         text-4xl font-bold text-[#23ad0e] text-center"> There are currently <br /> no request for this food. </h2>
                             </div>
                         </div>
                             :

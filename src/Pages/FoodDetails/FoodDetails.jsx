@@ -6,7 +6,7 @@ import { GiNotebook } from "react-icons/gi";
 import { MdProductionQuantityLimits } from "react-icons/md";
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
-import { FaDonate } from "react-icons/fa";
+import { FaDonate, FaUserCircle } from "react-icons/fa";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
@@ -46,7 +46,7 @@ const FoodDetails = () => {
             additionalNotes
         };
 
-        fetch('http://localhost:5000/requestFood', {
+        fetch('https://community-food-sharing-server-six.vercel.app/requestFood', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -233,7 +233,16 @@ const FoodDetails = () => {
                     <div data-aos="fade-up" data-aos-duration="3000" className="lg:col-span-1">
                         <div className="shadow-xl rounded-xl py-10 px-5 ">
                             <div className="flex justify-center mb-5">
-                                <img className="rounded-full w-36" src={donatorImage} alt="" />
+                                {
+                                    donatorImage ? (
+                                        <div className='w-36'>
+                                            <img className="w-36  rounded-full" src={donatorImage} alt="" />
+                                        </div>
+                                    ) : (
+                                        <FaUserCircle className="text-9xl">
+                                        </FaUserCircle>
+                                    )
+                                }
                             </div>
                             <div>
                                 <h2 className="text-2xl text-center uppercase font-bold"><span className="text-lg">Donator:</span> <br /> {donatorName}</h2>

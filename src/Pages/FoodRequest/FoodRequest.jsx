@@ -18,7 +18,6 @@ const FoodRequest = () => {
 
     const { user } = useContext(AuthContext);
     const foods = useLoaderData();
-    console.log(foods);
     const userFoodRequest = foods.filter(item => item.userEmail.toLowerCase() === user?.email.toLowerCase());
     const [myFoodRequest, setMyFoodRequest] = useState(userFoodRequest);
 
@@ -46,7 +45,7 @@ const FoodRequest = () => {
 
 
                                 <div className="flex justify-center">
-                                    <p className="font-bold text-xl text-center text-black w-3/4" >In our community food-sharing website, we understand that sometimes,. That is why we have introduced the Food Request feature, a unique way to satisfy your cravings and connect with our passionate culinary community.</p>
+                                    <p className="font-bold text-xl text-center text-black w-full lg:w-3/4 " >In our community food-sharing website, we understand that sometimes,. That is why we have introduced the Food Request feature, a unique way to satisfy your cravings and connect with our passionate culinary community.</p>
                                 </div>
                             </div>
                         </div>

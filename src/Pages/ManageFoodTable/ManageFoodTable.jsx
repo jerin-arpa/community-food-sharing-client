@@ -39,7 +39,7 @@ const ManageFoodTable = ({ food, myFood, setMyFood, tableColumn }) => {
         })
             .then((result) => {
                 if (result.isConfirmed) {
-                    fetch(`http://localhost:5000/food/${_id}`, {
+                    fetch(`https://community-food-sharing-server-six.vercel.app/food/${_id}`, {
                         method: 'DELETE',
                     })
                         .then(res => res.json())
@@ -62,7 +62,7 @@ const ManageFoodTable = ({ food, myFood, setMyFood, tableColumn }) => {
 
 
     return (
-        <tbody key={food.id} {...getTableBodyProps()}>
+        <tbody className='overflow-x-auto' key={food.id} {...getTableBodyProps()}>
             {
                 rows.map(row => {
                     prepareRow(row)

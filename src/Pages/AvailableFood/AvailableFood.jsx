@@ -66,7 +66,7 @@ const AvailableFood = () => {
                                 <h1 className="mb-5 text-3xl lg:text-6xl font-bold text-black text-center">OUR <span className="text-[#23ad0e]"> AVAILABLE </span>FOOD</h1>
 
 
-                                <p className="font-bold text-xl text-center text-black">Step into our Available Food section and experience a delightful feast for all your senses</p>
+                                <p className="font-bold text-xl text-center text-black w-full lg:w-3/4 ">Step into our Available Food section and experience a delightful feast for all your senses</p>
 
                                 <div className="flex justify-center my-10">
                                     <button onClick={handleSortByDate} className="btn w-full lg:w-1/4 bg-[#23ad0e] border-[#23ad0e] hover:bg-white hover:text-[#23ad0e] text-white hover:border-[#23ad0e]">Sort by Date</button>
