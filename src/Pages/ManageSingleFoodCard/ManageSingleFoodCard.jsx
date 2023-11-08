@@ -46,7 +46,7 @@ const ManageSingleFoodCard = ({ food, handlePending }) => {
                             <MdEmail className='text-2xl'></MdEmail>
                         </div>
                         <div className="flex items-center">
-                            <p className='text-sm'> {userEmail}</p>
+                            <p className='text-sm mb-3'> {userEmail}</p>
                         </div>
                     </div>
                     <p className='mb-2'><span className='font-bold text-xl'>Request Time & Date: </span> {requestDate}</p>

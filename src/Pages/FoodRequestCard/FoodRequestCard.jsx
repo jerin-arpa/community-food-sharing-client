@@ -16,7 +16,7 @@ const FoodRequestCard = ({ foodRequest, myFoodRequest, setMyFoodRequest }) => {
         AOS.init();
     }, []);
 
-    const { food, donationMoney, requestDate } = foodRequest;
+    const { food, status, donationMoney, requestDate } = foodRequest;
     const { _id } = foodRequest;
 
     const handleDelete = _id => {
@@ -67,7 +67,7 @@ const FoodRequestCard = ({ foodRequest, myFoodRequest, setMyFoodRequest }) => {
                                 <MdOutlineEventAvailable></MdOutlineEventAvailable>
                             </div>
                             <div className="flex items-center">
-                                <p> {food.status}</p>
+                                <p> {status}</p>
                             </div>
                         </div>
                     </div>
@@ -117,7 +117,7 @@ const FoodRequestCard = ({ foodRequest, myFoodRequest, setMyFoodRequest }) => {
 
             <div>
                 {
-                    food.status === 'Delivered' ?
+                    status === 'Delivered' ?
                         <button disabled onClick={() => handleDelete(_id)} className="btn w-full bg-[#23ad0e] border-[#23ad0e] hover:bg-white hover:text-[#23ad0e] text-white hover:border-[#23ad0e] mt-5 mb-3">Cancel Request</button>
                         :
                         <button onClick={() => handleDelete(_id)} className="btn w-full bg-[#23ad0e] border-[#23ad0e] hover:bg-white hover:text-[#23ad0e] text-white hover:border-[#23ad0e] mt-5 mb-3">Cancel Request</button>

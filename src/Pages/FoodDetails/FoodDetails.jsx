@@ -29,6 +29,7 @@ const FoodDetails = () => {
 
     const { _id, foodName, quantity, pickUpLocation, foodImage, date, note, donatorImage, donatorName, email } = food;
     const requestDate = moment().format("YYYY-MM-D, h:mm a");
+    const status = 'Available';
 
     const handleRequestFood = event => {
         event.preventDefault();
@@ -41,6 +42,7 @@ const FoodDetails = () => {
             userImage: user?.photoURL,
             userEmail: user?.email,
             food,
+            status: status,
             requestDate,
             donationMoney,
             additionalNotes

@@ -44,36 +44,38 @@ const ManageFoodCard = ({ myFood, setMyFood }) => {
 
 
     return (
-        <table className='table-container' {...getTableProps()}>
-            <thead>
+        <div className='table-container'>
+            <table {...getTableProps()}>
+                <thead>
+                    {
+                        headerGroups.map((headerGroup) => (
+                            <tr key={headerGroup._id}
+                                {...headerGroup.getHeaderGroupProps()}
+                            >
+                                {headerGroup.headers.map((column) => (
+                                    <th key={column.id} {...column.getHeaderProps()}>
+                                        {column.render('Header')}
+                                    </th>
+                                ))}
+
+                                <th>Update Button</th>
+                                <th>Delete Button</th>
+                                <th>Manage Button</th>
+                            </tr>
+                        ))}
+                </thead>
+
                 {
-                    headerGroups.map((headerGroup) => (
-                        <tr key={headerGroup._id}
-                            {...headerGroup.getHeaderGroupProps()}
-                        >
-                            {headerGroup.headers.map((column) => (
-                                <th key={column.id} {...column.getHeaderProps()}>
-                                    {column.render('Header')}
-                                </th>
-                            ))}
-
-                            <th>Update Button</th>
-                            <th>Delete Button</th>
-                            <th>Manage Button</th>
-                        </tr>
-                    ))}
-            </thead>
-
-            {
-                myFood.map(food => <ManageFoodTable
-                    key={food._id}
-                    food={food}
-                    myFood={myFood}
-                    setMyFood={setMyFood}
-                    tableColumn={tableColumn}
-                ></ManageFoodTable>)
-            }
-        </table>
+                    myFood.map(food => <ManageFoodTable
+                        key={food._id}
+                        food={food}
+                        myFood={myFood}
+                        setMyFood={setMyFood}
+                        tableColumn={tableColumn}
+                    ></ManageFoodTable>)
+                }
+            </table>
+        </div>
     );
 };
 
