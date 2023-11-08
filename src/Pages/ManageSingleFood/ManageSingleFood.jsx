@@ -24,7 +24,7 @@ const ManageSingleFood = () => {
     const [myFood, setMyFood] = useState(userFoods);
 
 
-    const handlePending = id => {
+    const handlePending = (id, foodId) => {
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -57,6 +57,22 @@ const ManageSingleFood = () => {
                                 updated.status = 'Delivered';
                                 const newUpdatedFood = [updated, ...remaining];
                                 setMyFood(newUpdatedFood);
+                            }
+                        })
+                    fetch(`https://community-food-sharing-server-six.vercel.app/food/${foodId}`, {
+                        method: 'DELETE',
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log(data);
+                            if (data.deletedCount > 0) {
+                                Swal.fire(
+                                    'Deleted!',
+                                    'Your food card has been deleted.',
+                                    'success'
+                                )
+                                const remaining = myFood.filter(request => request._id !== foodId)
+                                setMyFood(remaining);
                             }
                         })
                 }

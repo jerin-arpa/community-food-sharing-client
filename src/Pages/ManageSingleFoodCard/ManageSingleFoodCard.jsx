@@ -13,7 +13,7 @@ const ManageSingleFoodCard = ({ food, handlePending }) => {
     }, []);
 
     const { _id, userName, userImage, userEmail, requestDate, donationMoney } = food;
-    console.log(food)
+    console.log(food);
 
 
     return (
@@ -58,9 +58,9 @@ const ManageSingleFoodCard = ({ food, handlePending }) => {
                 <div className='flex justify-center mt-4'>
                     {
                         food.status === 'Delivered' ?
-                            <button onClick={() => handlePending(_id)} className="btn w-full bg-[#23ad0e] border-[#23ad0e] hover:bg-white hover:text-[#23ad0e] text-white font-bold hover:border-[#23ad0e]">Delivered</button>
+                            <button className="btn w-full bg-[#23ad0e] border-[#23ad0e] hover:text-[#23ad0e] text-white font-bold ">Delivered</button>
                             :
-                            <button onClick={() => handlePending(_id)} className="btn w-full bg-[#FF3811] border-[#FF3811] hover:bg-white hover:text-[#FF3811] text-white font-bold hover:border-[#FF3811]">Approved</button>
+                            <button onClick={() => handlePending(_id, food.food._id)} className="btn w-full bg-warning border-warning hover:bg-white hover:text-warning text-white font-bold hover:border-warning">Approved</button>
                     }
                 </div>
             </div>
