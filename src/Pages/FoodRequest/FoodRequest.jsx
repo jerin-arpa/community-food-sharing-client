@@ -45,7 +45,9 @@ const FoodRequest = () => {
                                 <h1 className="mb-5 text-3xl lg:text-6xl font-bold text-black text-center">MY  <span className="text-[#23ad0e]"> FOOD REQUEST </span>COLLECTIONS</h1>
 
 
-                                <p className="font-bold text-xl text-center text-black">In our community food-sharing website, we understand that sometimes,. That is why we have introduced the Food Request feature, a unique way to satisfy your cravings and connect with our passionate culinary community.</p>
+                                <div className="flex justify-center">
+                                    <p className="font-bold text-xl text-center text-black w-3/4" >In our community food-sharing website, we understand that sometimes,. That is why we have introduced the Food Request feature, a unique way to satisfy your cravings and connect with our passionate culinary community.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -62,7 +64,7 @@ const FoodRequest = () => {
                                         <BsFillEmojiSmileFill className="text-9xl text-[#ffcc33] mb-5"></BsFillEmojiSmileFill>
                                     </div>
                                     <h2 className="
-                         text-4xl font-bold text-[#23ad0e] text-center"> There are currently <br /> no food request. </h2>
+                         text-4xl font-bold text-[#23ad0e] text-center"> As of now, there are no <br /> food requests  initiated by you</h2>
                                 </div>
                             </div>
                                 :

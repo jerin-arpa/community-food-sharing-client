@@ -90,7 +90,9 @@ const AddFood = () => {
                                 <h1 className="mb-5 text-3xl lg:text-6xl font-bold text-black text-center">SHARE THE LOVE &<span className="text-[#23ad0e]">  ADD A FOOD </span></h1>
 
 
-                                <p className="font-bold text-xl text-center text-black">At our community food-sharing website, we believe in the power of sharing, and we have made it even easier with our Add Food in a Card feature. It is like sending a delicious gift to your neighbors and fellow food enthusiasts.</p>
+                                <div className="flex justify-center">
+                                    <p className="font-bold text-xl text-center text-black w-3/4">At our community food-sharing website, we believe in the power of sharing, and we have made it even easier with our Add Food in a Card feature. It is like sending a delicious gift to your neighbors and fellow food enthusiasts.</p>
+                                </div>
                             </div>
                         </div>
                     </div>

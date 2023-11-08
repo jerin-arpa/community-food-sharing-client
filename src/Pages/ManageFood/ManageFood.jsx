@@ -19,7 +19,7 @@ const ManageFood = () => {
     const { user } = useContext(AuthContext);
 
     const foods = useLoaderData();
-    console.log(foods)
+    console.log(foods);
     const userFoods = foods.filter(item => item.email.toLowerCase() === user.email.toLowerCase());
     console.log(userFoods);
     const [myFood, setMyFood] = useState(userFoods);
@@ -48,7 +48,9 @@ const ManageFood = () => {
                                 <h1 className="mb-5 text-3xl lg:text-6xl font-bold text-black text-center">TAKE CONTROL OF <span className="text-[#23ad0e]"> YOUR ADDED FOOD </span></h1>
 
 
-                                <p className="font-bold text-xl text-center text-black">Welcome to the heart of our community food sharing website. Whether you are a home chef, a food lover, or an organizer of local food events, our comprehensive management tools put you in charge.</p>
+                                <div className="flex justify-center">
+                                    <p className="font-bold text-xl text-center text-black w-3/4">Welcome to the heart of our community food sharing website. Whether you are a home chef, a food lover, or an organizer of local food events, our comprehensive management tools put you in charge.</p>
+                                </div>
 
                             </div>
                         </div>

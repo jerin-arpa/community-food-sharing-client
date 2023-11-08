@@ -28,7 +28,7 @@ const FoodDetails = () => {
     console.log(food);
 
     const { _id, foodName, quantity, pickUpLocation, foodImage, date, note, donatorImage, donatorName, email } = food;
-    const requestDate = moment().format("YYYY-MM-D");
+    const requestDate = moment().format("YYYY-MM-D, h:mm a");
 
     const handleRequestFood = event => {
         event.preventDefault();
@@ -37,8 +37,8 @@ const FoodDetails = () => {
         console.log(donationMoney, additionalNotes);
 
         const newFood = {
-            // userName: user?.displayName,
-            // userImage: user?.photoURL,
+            userName: user?.displayName,
+            userImage: user?.photoURL,
             userEmail: user?.email,
             food,
             requestDate,

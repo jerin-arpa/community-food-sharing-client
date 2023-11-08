@@ -80,7 +80,7 @@ const FoodRequestCard = ({ foodRequest, myFoodRequest, setMyFoodRequest }) => {
             <h2 className='my-2'><span className='font-bold text-xl py-2'>Email:</span> <span className='text-xl'>{food.email}</span></h2>
 
             <div>
-                <hr className='my-4' />
+                <hr className='my-6' />
             </div>
 
             <div>

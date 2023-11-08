@@ -80,15 +80,15 @@ const ManageFoodTable = ({ food, myFood, setMyFood, tableColumn }) => {
                             }
                             <td>
                                 <Link to={`/updateFood/${_id}`}>
-                                    <button className='btn btn-info w-full'>Update</button>
+                                    <button className='btn btn-info w-full font-bold text-black'>Update</button>
                                 </Link>
                             </td>
                             <td>
-                                <button className='btn btn-error w-full' onClick={() => handleDelete(_id)}>Delete</button>
+                                <button className='btn btn-error w-full font-bold text-black' onClick={() => handleDelete(_id)}>Delete</button>
                             </td>
                             <td>
                                 <Link to={`/manageSingleFood/${_id}`}>
-                                    <button className='btn btn-success w-full'>Manage</button>
+                                    <button className='btn btn-success w-full  font-bold text-black'>Manage</button>
                                 </Link>
                             </td>
                         </tr>

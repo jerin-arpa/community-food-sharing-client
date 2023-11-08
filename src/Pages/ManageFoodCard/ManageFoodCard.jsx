@@ -57,9 +57,9 @@ const ManageFoodCard = ({ myFood, setMyFood }) => {
                                 </th>
                             ))}
 
-                            <th>Update</th>
-                            <th>Delete</th>
-                            <th>Manage</th>
+                            <th>Update Button</th>
+                            <th>Delete Button</th>
+                            <th>Manage Button</th>
                         </tr>
                     ))}
             </thead>
